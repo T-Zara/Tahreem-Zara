@@ -1,0 +1,24 @@
+<body class="content-body">
+
+<div class="container my-5">
+  <h2 class="text-center mb-4">My Projects</h2>
+  <div class="row">
+    @for (project of projects; track project.title) {
+      <div class="col-md-6 mb-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">{{ project.title }}</h5>
+            <p class="card-text">{{ project.description }}</p>
+            <div>
+              @for (tech of project.tech; track tech) {
+                <span class="badge bg-primary me-1">{{ tech }}</span>
+              }
+            </div>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</div>
+
+</body>
