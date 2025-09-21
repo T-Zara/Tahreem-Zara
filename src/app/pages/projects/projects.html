@@ -1,8 +1,47 @@
 <body class="content-body">
 
-<div class="container my-5">
-  <h2 class="text-center mb-4">My Projects</h2>
+<div class="container">
   <div class="row">
+    <div class="col-12 title-txt text-center">
+      My Projects
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 typing-text para-txt m-1 text-center">
+      A showcase of my recent work in mobile apps, AI, ML Research and web development.
+    </div>
+  </div>
+
+  <div class="row mt-3 scroll-cont pb-4" #scrollContainer>
+    <div class="col-auto align-items-center d-flex scroll-arrow left-arrow" (click)="scroll('left')">
+        <div class="f-30 text-white"> <i class="bi bi-arrow-left-circle"></i> </div>
+    </div>
+    @for (project of projects; track project.title) {
+    <div class="col-4 rounded-3 border-white p-1 m-4 mx-2 project-card" [style.background-image]="'url(' + project.image + ')'">
+      <div class="w-100 rounded-3 text-white p-2 project-pictures-container d-flex justify-content-center align-items-center text-center">
+        <span class="project-details">{{ project.description }} </span>
+      </div>
+      <div class="row project-title text-white mt-3">
+        <div class="col-auto">
+         {{ project.title }}
+        </div>
+      </div>
+      <div class="row ">
+        <div class="col-auto text-white mt-2 mr-1">
+          @for (tech of project.tech; track tech) {
+         <span class="tags rounded-4 p-1 border-white">{{ tech }}</span>
+          }
+        </div>
+      </div>
+    </div>
+    }
+        <div class="col-auto align-items-center d-flex scroll-arrow right-arrow" (click)="scroll('right')">
+        <div class="f-30 text-white"> <i class="bi bi-arrow-right-circle"></i> </div>
+    </div>
+  </div>
+
+  <!-- <h2 class="text-center mb-4">My Projects</h2> -->
+  <!-- <div class="row">
     @for (project of projects; track project.title) {
       <div class="col-md-6 mb-4">
         <div class="card h-100 shadow-sm">
@@ -18,7 +57,7 @@
         </div>
       </div>
     }
-  </div>
+  </div> -->
 </div>
 
 </body>

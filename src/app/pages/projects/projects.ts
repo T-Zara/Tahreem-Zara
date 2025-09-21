@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 interface Project {
     title: string;
     description: string;
     tech: string[];
+    image?: string;
   }
   
 @Component({
@@ -14,6 +15,19 @@ interface Project {
 })
 
 export class Projects {
+
+    @ViewChild('scrollContainer', { static: false }) scrollContainer!: ElementRef;
+
+    scroll(direction: 'left' | 'right') {
+      const container = this.scrollContainer.nativeElement;
+      const scrollAmount = 300; // adjust based on card width
+
+      if (direction === 'left') {
+        container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+      } else {
+        container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+      }
+    }
   
 projects: Project[] = [
     {
@@ -21,7 +35,8 @@ projects: Project[] = [
       description: `Built with Ionic Angular. I worked on creating a Figma-like UI, 
       added native functionalities (location, notifications, camera), 
       and integrated Firebase.`,
-      tech: ['Ionic', 'Angular', 'Firebase']
+      tech: ['Ionic', 'Angular', 'Firebase'],
+      image: '../public/tablestar/tablestar02-2.jpg'
     },
     {
       title: 'Efficiency App',

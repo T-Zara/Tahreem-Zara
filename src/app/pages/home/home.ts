@@ -12,16 +12,12 @@ export class Home {
  ngAfterViewInit(): void {
     const options = {
       strings: [
-        'Hi, I am Tahreem Zara',
-        'A Passionate Angular and Ionic Developer',
-        'AI Researcher and Enthusiast',
-        'Python Enthusiast',
-        'Deep Learning Practitioner'
+        'Passionate about creating beautiful, functional digital experiences. Specialized in React, Node.js, and modern web technologies.',
       ],
-      typeSpeed: 60,
-      backSpeed: 40,
-      backDelay: 1500,
-      loop: true
+      typeSpeed: 10,
+      backSpeed: 80,
+      backDelay: 15000,
+      loop: false
     };
 
     new Typed(this.typedElement.nativeElement, options);

@@ -16,7 +16,7 @@ body{
 
 .theme-dark{
     // background-color: #121212;
-    background-image: url('../public/background-colorful-7.jpg'); 
+    background-image: url('../public/background-image-dark.jpg'); 
     background-attachment: fixed; 
     background-size: cover;
     color: white;
@@ -25,26 +25,76 @@ body{
         background: rgba(255, 0, 0, 0.367);
         color: white;
         // opacity: 0.8;
-}
+        }
+        .title-txt{
+            color: #ffffff;
+        }
+        .subtitle-txt{
+           color: #e5e5e5
+        }
+        .para-txt{
+            color: #e0e0e0;
+        }
 }
 .theme-light{
     // background-color: white;
-    background-image: url('../public/background-colorful-3.jpg');
+    background-image: url('../public/background-image-light2.jpg');
     background-attachment: fixed; 
     background-size: cover;
-    color: black;
+    color: rgb(255, 255, 255);
 
       .content-body{
-        background: rgba(191, 191, 191, 0.498);
+        background-color: rgba(255, 255, 255, 0.1);
+        // background: rgba(191, 191, 191, 0.648);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
         color: black;
         // opacity: 0.5;
-    }
+        }
+         .title-txt{
+            color: #ffffff;
+        }
+        .subtitle-txt{
+           color: #e5e5e5
+        }
+        .para-txt{
+            color: #e0e0e0;
+        } 
+          
+
+}
+.content-body-home{
+    margin: 60px !important; 
+}
+.content-body{
+    border-radius: 12px;
+    padding: 16px;
+    height: fit-content;
+    margin: 16px;
+    backdrop-filter: blur(10px);
+}
+.title-txt{
+    font-size: 48px;
+    // font-weight: 600;
 }
 
-.content-body{
-    border-radius: 16px;
-    padding: 32px;
-    height: fit-content;
-    margin: 60px;
-    margin-top: 70px;
+.subtitle-txt{
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.para-txt{
+    font-size: 20px;
+}
+
+.btn {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2); 
+}
+.f-30{
+    font-size: 30px;
 }

@@ -1,13 +1,10 @@
 <body [class]="theme"> 
 <div class="container-fluid p-4">
-    <div class="row justify-content-end nav">
-         <div class="my-name p-4 w-auto">
-            Tahreem <br /> &nbsp; &nbsp; Zara
-        </div>  
-        <div class="col-auto" (click)="navigate('home')">@if (isActive === 'home') {<i class="bi bi-circle-fill mr-1"></i>} Home</div>
-        <div class="col-auto" (click)="navigate('about')">@if (isActive === 'about') {<i class="bi bi-circle-fill mr-1"></i>} About</div>
-        <div class="col-auto" (click)="navigate('projects')">@if (isActive === 'projects') {<i class="bi bi-circle-fill mr-1"></i>} Projects</div>
-        <div class="col-auto" (click)="navigate('contact')">@if (isActive === 'contact') {<i class="bi bi-circle-fill mr-1"></i>} Contact Me</div>
+    <div class="row justify-content-center nav">
+        <div class="col-auto" (click)="navigate('home')">@if (isActive === 'home') {<i class="bi bi-circle-fill mr-1 ml-2"></i>} Home</div>
+        <div class="col-auto" (click)="navigate('projects')">@if (isActive === 'projects') {<i class="bi bi-circle-fill mr-1 ml-2"></i>} Projects</div>        
+        <div class="col-auto" (click)="navigate('about')">@if (isActive === 'about') {<i class="bi bi-circle-fill mr-1 ml-2"></i>} About</div>
+        <div class="col-auto" (click)="navigate('contact')">@if (isActive === 'contact') {<i class="bi bi-circle-fill mr-1 ml-2"></i>} Contact Me</div>
     </div>
 </div>
 </body>
