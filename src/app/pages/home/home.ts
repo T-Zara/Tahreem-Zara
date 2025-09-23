@@ -1,4 +1,5 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 import Typed from 'typed.js';
 @Component({
   selector: 'app-home',
@@ -7,7 +8,7 @@ import Typed from 'typed.js';
   styleUrl: './home.scss'
 })
 export class Home {
-  
+  constructor(private router: Router) {}
 @ViewChild('typedElement', { static: true }) typedElement!: ElementRef;
  ngAfterViewInit(): void {
     const options = {
@@ -22,5 +23,7 @@ export class Home {
 
     new Typed(this.typedElement.nativeElement, options);
   }
-
+  navigate(route: string){
+    this.router.navigateByUrl(route);
+  }
 }

@@ -17,22 +17,24 @@
         <div class="f-30 text-white"> <i class="bi bi-arrow-left-circle"></i> </div>
     </div>
     @for (project of projects; track project.title) {
-    <div class="col-4 rounded-3 border-white p-1 m-4 mx-2 project-card" [style.background-image]="'url(' + project.image + ')'">
-      <div class="w-100 rounded-3 text-white p-2 project-pictures-container d-flex justify-content-center align-items-center text-center">
-        <span class="project-details">{{ project.description }} </span>
+    <div class="col-3 rounded-3 border-white p-1 m-4 mx-3 project-card" (click)="viewProject(project.title)">
+      <div class="w-100 rounded-3 text-white p-2 project-pictures-container d-flex justify-content-center align-items-center text-center" [style.background-image]="'url(' + (project.image?.replace('../public/', '') || '') + ')'">
+        <span class="project-details">{{ project.shortDescription }} </span>
       </div>
       <div class="row project-title text-white mt-3">
         <div class="col-auto">
          {{ project.title }}
         </div>
       </div>
-      <div class="row ">
-        <div class="col-auto text-white mt-2 mr-1">
-          @for (tech of project.tech; track tech) {
-         <span class="tags rounded-4 p-1 border-white">{{ tech }}</span>
-          }
-        </div>
-      </div>
+<div class="row mx-2">
+  <div class="col-12 text-white my-2 px-0">
+    <div class="d-flex flex-wrap gap-2">
+      @for (tech of project.tech; track tech) {
+        <span class="tag-chip">{{ tech }}</span>
+      }
+    </div>
+  </div>
+</div>
     </div>
     }
         <div class="col-auto align-items-center d-flex scroll-arrow right-arrow" (click)="scroll('right')">

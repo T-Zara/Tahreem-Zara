@@ -1,0 +1,36 @@
+<body class="content-body">
+<div class="container">
+  <div class="row">
+    <div class="col-12 title-txt text-center">
+      {{project.title}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 typing-text f-14 m-1">
+      {{project.description}}
+    </div>
+  </div>
+
+
+  <div class="row mt-3 scroll-cont pb-4" #scrollContainer>
+    <div class="col-auto align-items-center d-flex scroll-arrow left-arrow" (click)="scroll('left')">
+        <div class="f-30 text-white"> <i class="bi bi-arrow-left-circle"></i> </div>
+    </div>
+
+    @for (image of project.images; track project.images) {
+    <div class="col-3 rounded-3 border-white p-1 m-4 mx-3 project-card" [style.background-image]="'url(' + (image?.replace('../public/', '') || '') + ')'">
+    </div>
+    }
+        <div class="col-auto align-items-center d-flex scroll-arrow right-arrow" (click)="scroll('right')">
+        <div class="f-30 text-white"> <i class="bi bi-arrow-right-circle"></i> </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+</div>
+</body>

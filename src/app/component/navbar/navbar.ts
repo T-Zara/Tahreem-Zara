@@ -31,4 +31,5 @@ ngOnInit() {
 navigate(route: string){
   this.router.navigateByUrl(route);
 }
+
 }

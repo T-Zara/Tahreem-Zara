@@ -1,4 +1,6 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
+import { ProjectService } from '../../services/project';
 
 interface Project {
     title: string;
@@ -14,8 +16,12 @@ interface Project {
   styleUrl: './projects.scss'
 })
 
-export class Projects {
+export class Projects { 
 
+    projects: any = [];
+  constructor(private router: Router, private projectService: ProjectService) {
+    this.projects = this.projectService.getProjects();
+  } 
     @ViewChild('scrollContainer', { static: false }) scrollContainer!: ElementRef;
 
     scroll(direction: 'left' | 'right') {
@@ -28,34 +34,8 @@ export class Projects {
         container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
       }
     }
-  
-projects: Project[] = [
-    {
-      title: 'Table-star App',
-      description: `Built with Ionic Angular. I worked on creating a Figma-like UI, 
-      added native functionalities (location, notifications, camera), 
-      and integrated Firebase.`,
-      tech: ['Ionic', 'Angular', 'Firebase'],
-      image: '../public/tablestar/tablestar02-2.jpg'
-    },
-    {
-      title: 'Efficiency App',
-      description: `A healthcare app for doctors to track patient records, 
-      filter charts by age/gender/date, and download/save PDFs. 
-      Integrated a chatbot for enhanced user experience.`,
-      tech: ['Angular', 'Chatbot', 'PDF Export']
-    },
-    {
-      title: 'Breast Cancer Detection',
-      description: `Trained a CNN-based model using U-Net with ResNet encoder 
-      for segmentation and DenseNet for classification of histopathology images.`,
-      tech: ['Deep Learning', 'PyTorch', 'CNN']
-    },
-    {
-      title: 'Health AI',
-      description: `A personal project where I’m building a mobile health AI app 
-      with Ionic Angular (frontend) and Node.js (backend).`,
-      tech: ['Ionic', 'Angular', 'Node.js']
-    }
-  ];
+
+  viewProject(title: string) {
+    this.router.navigate(['/project-details'], { queryParams: { title } });
+  }
 }

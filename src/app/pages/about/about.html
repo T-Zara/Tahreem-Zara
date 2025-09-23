@@ -1,67 +1,167 @@
 <body class="content-body">
-<div class="container my-5">
-
-  <!-- Hero -->
-  <div class="row align-items-center mb-5">
-    <div class="col-md-8">
-      <h1 class="fw-bold">About Me</h1>
-      <p class="lead">
-        I’m a <b>Software Developer</b> with a BS in IT and an MS/MPhil in Computer Science, 
-        where I specialized in <b>Artificial Intelligence research</b>.
-      </p>
-      <p>
-        I love combining my knowledge of <b>web & mobile development</b> with my 
-        <b>AI background</b> to create impactful, user-friendly, and intelligent solutions.
-      </p>
-    </div>
-    <div class="col-md-4 text-center">
-      <!-- Replace with your photo -->
-      <img src="assets/profile.jpg" alt="My Photo" class="img-fluid rounded-circle shadow" style="max-width: 200px;">
+<div class="container">
+  <div class="row">
+    <div class="col-12 title-txt text-center">
+        About Me
     </div>
   </div>
+  <div class="row">
+    <div class="col-12 typing-text para-txt m-1 text-center">
+        I’m a Mobile App Developer with a BS in IT and an MS/MPhil in Computer Science, 
+        where I specialized in Artificial Intelligence research.
+    </div>
+  </div>
+  <div class="gray-cont rounded-3 p-4 m-4">
+    <div class="row mt-3 subtitle-txt">
+      <div class="col-auto"><i class="bi bi-person mr-1"></i></div>
+    <div class="col">
+    Introduction
+    </div>
+    </div>
+    <div class="row m-1 para-txt">
+      Hi, I’m Tahreem Zara 👩‍💻—a curious mind who grew up glued to a computer screen instead of textbooks (sorry teachers 😅). While other kids were busy with storybooks, I was busy exploring software, breaking Windows, reinstalling it again (yes, I can install Windows like a pro), and
+      figuring out mysterious things like environment variables before I even knew they were important.
+      My tech journey started way back with Adobe Photoshop 7.0, where I spent hours experimenting with designs. That creative spark eventually grew into a blend of UI/UX design, 3D modeling, machine learning, and full-stack development. Over the years, I’ve learned to build intelligent AI models, design beautiful interfaces, create smooth app experiences, and even sell digital products online.
+      I love combining creativity with technical skills—whether it’s designing a sleek Angular/Ionic app with animations, building 
+      a deep learning framework like UtopiaNet for cancer research, or just whipping up a quick prototype in Figma.
+      What sets me apart is not just the skills, but the way I approach things: I dive in, experiment, break, rebuild, and polish until I get it right.
+      Oh, and one more fun fact: while most people panic when their PC crashes, I smile because it’s just another chance to reinstall Windows.
+    </div>
+</div>
 
-  <!-- Education -->
-  <div class="mb-5">
-    <h3 class="fw-semibold">Education</h3>
-    <ul>
-      <li><b>MS/MPhil in Computer Science</b> – Research in Artificial Intelligence</li>
-      <li><b>BS in Information Technology</b></li>
-    </ul>
+
+<div class="row m-1">
+  <div class="gray-cont rounded-3 p-4 m-4 col">
+    <div class="row mt-3 subtitle-txt">
+      <div class="col-auto"><i class="bi bi-heart mr-1"></i></div>
+    <div class="col">
+    Interests
+    </div>
+    </div>
+    <div class="row m-1 f-16 lgt-txt">
+      @for (i of interests; track interests){
+      <div class="tag rounded-3 col-auto m-1">{{i}}</div>
+    }
+    </div>
   </div>
 
-  <!-- Skills -->
-  <div class="mb-5">
-    <h3 class="fw-semibold">Skills & Tools</h3>
-    <span class="badge bg-primary me-1 mb-1">Angular</span>
-    <span class="badge bg-success me-1 mb-1">Ionic</span>
-    <span class="badge bg-dark me-1 mb-1">Node.js</span>
-    <span class="badge bg-warning text-dark me-1 mb-1">Firebase</span>
-    <span class="badge bg-danger me-1 mb-1">Python</span>
-    <span class="badge bg-secondary me-1 mb-1">PyTorch</span>
-    <span class="badge bg-info text-dark me-1 mb-1">AI/ML</span>
+  <div class="gray-cont rounded-3 p-4 m-4 col">
+    <div class="row mt-3 subtitle-txt">
+      <div class="col-auto"><i class="bi bi-heart mr-1"></i></div>
+    <div class="col">
+    Strengths
+    </div>
+    </div>
+    <div class="row m-1 f-16 lgt-txt">
+      @for (s of strengths; track strengths) {
+      <div class="tag rounded-3 col-auto m-1">{{s}}</div>
+      }
+    </div>
+  </div>  
+</div>
+
+
+
+
+  <div class="gray-cont rounded-3 p-4 m-4">
+    <div class="row mt-3 subtitle-txt">
+      <div class="col-auto"><i class="bi bi-mortarboard mr-1"></i></div>
+    <div class="col">
+    Education
+    </div>
+    </div>
+    <div class="row m-1 para-txt">
+      <div class="tag rounded-3 col m-1 px-4 py-2">
+        <div class="row m-1 subtitle-txt">Master of Science in Computer Science</div>
+        <div class="row m-1 my-2 f-14">COMSATS University Islamabad (CUI), Lahore Campus</div>
+        <div class="row my-1">
+          <div class="col">Image Processing and Machine Learning</div>
+          <div class="col-auto tag rounded-2 align-items-center d-flex f-14">2023-2025</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row m-1 mt-2 para-txt">
+      <div class="tag rounded-3 col m-1 px-4 py-2">
+        <div class="row m-1 subtitle-txt">Bachelor of Science in Information Technology</div>
+        <div class="row m-1 my-2 f-14">Virtual University Pakistan, Lahore Campus</div>
+        <div class="row my-1">
+          <div class="col"> Django, Python</div>
+          <div class="col-auto tag rounded-2 align-items-center d-flex f-14">2016-2020</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row m-1 mt-2 para-txt">
+      <div class="tag rounded-3 col m-1 px-4 py-2">
+        <div class="row m-1 subtitle-txt">Intermediate</div>
+        <div class="row m-1 my-2 f-14">Army Public School and College System, RYK</div>
+        <div class="row my-1">
+          <div class="col"> Pre-Enginering </div>
+          <div class="col-auto tag rounded-2 align-items-center d-flex f-14">2014-2016</div>
+        </div>
+      </div>
+    </div>    
+
+    <div class="row m-1 mt-2 para-txt">
+      <div class="tag rounded-3 col m-1 px-4 py-2">
+        <div class="row m-1 subtitle-txt">Metric</div>
+        <div class="row m-1 my-2 f-14">Army Public School and College System, RYK</div>
+        <div class="row my-1">
+          <div class="col"> Medical </div>
+          <div class="col-auto tag rounded-2 align-items-center d-flex f-14">2012-2014</div>
+        </div>
+      </div>
+    </div>      
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="gray-cont rounded-3 p-4 m-4">
+    <div class="row mt-3 subtitle-txt">
+      <div class="col-auto"><i class="bi bi-person mr-1"></i></div>
+    <div class="col">
+    Hobbies And Interests
+    </div>
+    </div>
+
+      <div class="row m-1 f-16 lgt-txt justify-content-center">
+           @for (h of hobbies; track hobbies) {
+            <div class="tag rounded-3 col-auto m-1 px-4 py-2">{{h}}</div>
+           }
+
+    </div>
+</div>
+
+
+
+<div class="m-4 row mb-2 justify-content-center subtitle-txt">Interested in working together or learning more about my experience? </div>
+
+  <div class="row mb-4">
+    <div class="col-12 d-flex justify-content-center mt-4 mb-4">
+      <!-- <a class="btn btn-primary mx-2" href="/assets/Tahreem_Zara_Resume.pdf" download="Tahreem_Zara_Resume.pdf">Download Resume</a> -->
+      <a class="btn mx-2 view-project-btn">Download My Resume</a>
+      <a class="btn mx-2 contact-me-btn view-project-btn">Get In Touch</a>
+    </div>
   </div>
 
-  <!-- Experience & Goals -->
-  <div class="mb-5">
-    <h3 class="fw-semibold">Experience & Goals</h3>
-    <p>
-      I have worked on mobile and web applications including healthcare apps, 
-      chatbots, and AI-driven systems like <b>automatic breast cancer detection</b> 
-      using deep learning. I enjoy tackling challenges that require both 
-      engineering and research skills.
-    </p>
-    <p>
-      My goal is to grow as a full-stack developer and AI researcher, 
-      contributing to projects that make a positive impact.
-    </p>
-  </div>
 
-  <!-- Call to Action -->
-  <div class="text-center">
-    <h4>📩 Let’s Connect</h4>
-    <p>If you’d like to collaborate or know more about my work, feel free to check my projects or contact me.</p>
-    <a href="/contact" class="btn btn-primary">Contact Me</a>
-  </div>
+
+
+
+
+
+
+
+
+
+
 
 </div>
 </body>
