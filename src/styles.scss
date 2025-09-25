@@ -22,7 +22,8 @@ body{
     color: white;
     
       .content-body{
-        background: rgba(255, 0, 0, 0.367);
+        // background: rgba(255, 0, 0, 0.367);
+        background: rgba(10, 10, 10, 0.6);
         color: white;
         // opacity: 0.8;
         }
@@ -44,7 +45,8 @@ body{
         }
         .tag{
             border: 1px solid white;
-            background: rgba(203, 203, 203, 0.6);
+            background: rgba(0, 0, 0, 0.55);
+            // background: rgba(203, 203, 203, 0.6);
         }   
         .green-bg{
             background-color: #a2ffa2d3;
@@ -81,11 +83,13 @@ body{
 
         .gray-cont{
             border: 1px solid white;
-            background: rgba(203, 203, 203, 0.6);
+            // background: rgba(203, 203, 203, 0.6);
+            background: rgba(78, 78, 78, 0.57);
         }
         .tag{
             border: 1px solid white;
-            background: rgba(203, 203, 203, 0.6);
+            // background: rgba(203, 203, 203, 0.6);
+            background: rgba(189, 143, 143, 0.41);
         }
         .green-bg{
             background-color: #a2ffa264;

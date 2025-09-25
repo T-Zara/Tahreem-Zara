@@ -8,7 +8,7 @@ import { ThemeService } from '../../services/theme-service';
   styleUrl: './footer.scss'
 })
 export class Footer {
-  theme: string = 'theme-light';
+  theme: string = '';
 
   constructor( private themeService: ThemeService, private cdr: ChangeDetectorRef) {}
 

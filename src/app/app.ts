@@ -11,7 +11,7 @@ import { ThemeService } from './services/theme-service';
   styleUrl: './app.scss'
 })
 export class App {
-  theme: string = 'theme-light';
+  theme: string = 'theme-dark';
   constructor(private themeService: ThemeService) {
      this.themeService.theme$.subscribe(theme => this.theme = theme);
 }
